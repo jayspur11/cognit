@@ -1,66 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import { Notecard } from './features/notecard/Notecard';
-import './App.css';
+// import { Notecard } from "./features/notecard/Notecard";
+import { Notelist } from "./features/notelist/Notelist";
+import "./App.css";
 
 function App() {
-    return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <Counter />
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <span>
-                    <span>Learn </span>
-                    <a
-                        className="App-link"
-                        href="https://reactjs.org/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        React
-                    </a>
-                    <span>, </span>
-                    <a
-                        className="App-link"
-                        href="https://redux.js.org/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Redux
-                    </a>
-                    <span>, </span>
-                    <a
-                        className="App-link"
-                        href="https://redux-toolkit.js.org/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Redux Toolkit
-                    </a>
-                    ,<span> and </span>
-                    <a
-                        className="App-link"
-                        href="https://react-redux.js.org/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        React Redux
-                    </a>
-                </span>
-            </header>
-            <body>
-                <Notecard
-                    title="Hello, world!"
-                    preview=""
-                    cardTapped={() => console.log("TAP!")}
-                />
-            </body>
-        </div>
-    );
+  return (
+    <Notelist
+      cards={[
+        { id: 1, title: "Hello, world!" },
+        {
+          id: 2,
+          title: "Hello, world!",
+          preview:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan iaculis enim et ornare. Suspendisse malesuada eleifend eros, a placerat dolor pulvinar eu. Pellentesque finibus vehicula tortor, sit amet malesuada...",
+        },
+        {
+          id: 3,
+          preview:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan iaculis enim et ornare. Suspendisse malesuada eleifend eros, a placerat dolor pulvinar eu. Pellentesque finibus vehicula tortor, sit amet malesuada justo feugiat a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec a velit nulla. Duis cursus felis eu magna sollicitudin, sed facilisis nunc consequat. Nulla viverra nibh lacus, ac pharetra tellus pellentesque a. Vestibulum aliquam ac nulla scelerisque sollicitudin. Quisque sed libero magna...",
+        },
+      ]}
+    />
+  );
 }
 
 export default App;
