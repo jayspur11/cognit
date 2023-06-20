@@ -1,4 +1,4 @@
-import { Notecard } from "./features/Notecard";
+import { Notelist } from "./features/Notelist";
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
@@ -29,10 +29,21 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <Notecard
-        title="Hello, world!"
-        preview=""
-        cardTapped={() => console.log("TAP!")}
+      <Notelist
+        cards={[
+          { id: 1, title: "Hello, world!" },
+          {
+            id: 2,
+            title: "Hello, world!",
+            preview:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan iaculis enim et ornare. Suspendisse malesuada eleifend eros, a placerat dolor pulvinar eu. Pellentesque finibus vehicula tortor, sit amet malesuada...",
+          },
+          {
+            id: 3,
+            preview:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan iaculis enim et ornare. Suspendisse malesuada eleifend eros, a placerat dolor pulvinar eu. Pellentesque finibus vehicula tortor, sit amet malesuada justo feugiat a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec a velit nulla. Duis cursus felis eu magna sollicitudin, sed facilisis nunc consequat. Nulla viverra nibh lacus, ac pharetra tellus pellentesque a. Vestibulum aliquam ac nulla scelerisque sollicitudin. Quisque sed libero magna...",
+          },
+        ]}
       />
     </>
   );
